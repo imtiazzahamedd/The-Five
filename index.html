@@ -17,6 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <!-- custom css -->
+   <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-[Inter]">
     <header class="py-8 text-center bg-gradient-to-t from-white via-teal-950 to-black">
@@ -30,7 +32,7 @@
       
 <main class="container mx-auto py-3 lg:py-4">
     <!-- profile cards -->
-    <div class="profile-cards flex flex-wrap gap-2 lg:gap-5 justify-center mx-auto">
+    <div class="profile-cards fade-in  flex flex-wrap gap-2 lg:gap-5 justify-center mx-auto">
     <div class="row1 flex flex-wrap gap-2 lg:gap-5 justify-center">
     <!-- Rime-->
     <div class="Rime group flex flex-col lg:flex-row items-center lg:justify-around max-w-xs lg:max-w-xl glass !bg-gradient-to-t  from-white via-teal-50 to-black rounded-xl lg:rounded-3xl hover:bg-gradient-to-t hover:from-white hover:via-teal-950 hover:to-black hover:text-white transition-colors duration-500 ease-in-out">
@@ -223,7 +225,7 @@
     </div>
   </div>
 <!-- Group pictures section -->
-    <div class="group_pic mt-3 lg:mt-5 text-center">
+    <div class="group_pic fade-in  mt-3 lg:mt-5 text-center">
       <div class="gp_heading py-2 lg:py-4">
         <h1 class="lg:text-xl text-xs lg:font-semibold uppercase">The closer you are, the fewer pictures you have together</h1>
       </div>
@@ -263,7 +265,7 @@
       </div>
     </div>
 <!-- Group video section -->
-<div class="gv ">
+<div class="gv fade-in  ">
   <section class="my-10 px-4 max-w-screen-md mx-auto">
     <h2 class="lg:text-3xl font-bold text-center mb-6 uppercase">Get some ideas from these videos😁</h2>
 
@@ -302,7 +304,7 @@
     </div>
   </section>
 </div>
-<div class="bf_text w-3/4 mx-auto lg:mt-17 rounded-2xl !bg-gradient-to-b from-white via-teal-50 to-gray-50">
+<div class="bf_text w-3/4 fade-in mx-auto lg:mt-17 rounded-2xl !bg-gradient-to-b from-white via-teal-50 to-gray-50">
   <p class="text-center text-sm lg:text-xl p-4 lg:p-10 leading-7"><span class="italic font-semibold text-2xl lg:text-3xl">The Five</span> is a unique blend of cousins and friends — some connected by blood, others by choice. But the bond we share goes beyond any bloodline.
     This is where we feel comfort, warmth, and joy — a place to be yourself without any judgment.
     We support each other through challenges, celebrate every success, and create unforgettable memories together.
@@ -310,7 +312,7 @@
     Here, friendship and family merge to form an unbreakable circle of trust and respect. This is more than just a group. <br> <span class="uppercase font-mono font-medium">it’s a <span class="text-amber-500">second home</span></span></p>
 </div>
 </main>
-<footer class="text-center bg-gradient-to-b from-white/40 via-teal-950/70 to-black backdrop-blur-lg !font-light leading-7 lg:text-lg text-white py-10 font-sans">
+<footer class="text-center fade-in bg-gradient-to-b from-white/40 via-teal-950/70 to-black backdrop-blur-lg !font-light leading-7 lg:text-lg text-white py-10 font-sans">
   <p class="mb-2 font-mono">
     Since 2023 — <span id="currentYear"></span>
   </p>
@@ -326,6 +328,6 @@
 
 
 
-
+<script src="app.js"></script>
 </body>
 </html>
