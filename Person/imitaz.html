@@ -26,28 +26,32 @@
     <header class="">
         <!-- header section -->
         <div
-            class="header flex gap-8 justify-center items-center bg-gradient-to-t from-white via-teal-950/70 to-black backdrop-blur-lg p-6">
+            class="header flex flex-col lg:flex-row lg:gap-8 gap-2 justify-center items-center lg:bg-gradient-to-t from-white via-teal-950/90 to-black 
+            backdrop-blur-lg lg:p-6 p-3">
             <!-- Make the image a hover group -->
             <div
-                class="header-img group relative w-96 h-96 rounded-full overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                class="header-img group relative lg:w-96 lg:h-96 w-48 h-48 rounded-full overflow-hidden transition-transform duration-300 ease-in-out 
+                hover:scale-105">
                 <!-- Image -->
                 <img class="w-full h-full object-cover rounded-full" src="../images/Imtiaz/imit.jpg"
                     alt="Imtiaz Ahamed">
                 <!-- Gradient overlay (only visible when not hovered) -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-t from-black via-teal-950/70 to-white/10 opacity-60 rounded-full transition-opacity duration-300 group-hover:opacity-0">
+                    class="absolute inset-0 lg:bg-gradient-to-t from-black via-teal-950/70 to-white/10 opacity-60 rounded-full transition-opacity duration-300 group-hover:opacity-0">
                 </div>
             </div>
             <!-- Text part -->
-            <div class="header-text max-w-[70%] text-2xl text-gray-300">
-                <p>
+            <div class="header-text lg:max-w-[70%] lg:text-2xl text-sm  lg:text-gray-300">
+                <p class="">
                     Hey there... <br>
-                    I'm <span class="text-3xl font-bold font-sans text-white animate-pulse duration-1000 delay-200">Imtiaz Ahamed</span> — the founder and the heart of
-                    <span class="italic font-semibold">The Five</span>.
+                    I'm <span class="lg:text-3xl text-xl font-bold font-sans lg:text-white animate-pulse duration-1000 delay-200">Imtiaz Ahamed</span> — the founder and the heart of
+                    <span class="italic font-semibold lg:text-white">The Five</span>.
                     <br>
-                    Two of them are my cousins and the other two are my close buddies, so naturally, I’ve become the
+                    <span>Two of them are my cousins and the other two are my close buddies,</span> 
+                    <span>
+                        so naturally, I’ve</span> <span>become the
                     central
-                    point of this squad. Can’t really call it a crime, can I?
+                    point of this squad.</span> <span>Can’t really call it a crime, can I?</span>
                 </p>
             </div>
 
@@ -56,40 +60,40 @@
     <main>
         <!-- About me -->
         <div class="about_memx-auto bg-gradient-to-t from-white via-teal-50 to-white backdrop-blur-md">
-            <section class="mt-16 px-6">
-                <h2 class="text-3xl w-52 mx-auto font-bold mb-4 border-b border-teal-500 text-center">About Me</h2>
-                <p class="text-lg leading-7 text-center  mb-4">
+            <section class="lg:mt-16 mt-4 lg:px-6 px-3">
+                <h2 class="lg:text-3xl text-2xl lg:w-52 w-32 mx-auto font-bold mb-4 border-b border-teal-500 text-center">About Me</h2>
+                <p class="lg:text-lg text-sm leading-7 text-center text-stone-800 lg:mb-4">
                     I’m a student of Electrical & Electronic Engineering (EEE), currently navigating the world of
                     programming
                     through Phitron.
                     But beyond circuits and code, I’m deeply passionate about the creative side of life.
                 </p>
                 <!-- skills -->
-                <section class="mx-auto mt-6 px-6 text-black max-w-7xl">
-                    <h2 class="text-3xl font-bold mb-6 border-b border-teal-500 inline-block">My Skills & Creative Side
+                <section class="mx-auto mt-6 lg:px-6 px-2 text-black lg:max-w-7xl">
+                    <h2 class="lg:text-xl text-xl font-bold mb-6 text-center italic font-mono">My Skills & Creative Side
                     </h2>
 
-                    <div class="skill flex flex-col md:flex-row justify-center items-center gap-10">
+                    <div class="skill flex flex-col md:flex-row justify-center items-center lg:gap-10">
 
-                        <!-- LEFT: Creative Interests -->
-                        <div class="left basis-full md:basis-[60%]">
+                        <!-- Creative Interests -->
+                        <div class="left basis-full md:basis-[60%] text-sm lg:text-base text-stone-800">
                             <ul class="list-disc ml-6 space-y-4">
                                 <li>
-                                    <strong>Photography:</strong> I love capturing real moments — whether it’s nature,
+                                    <strong class="text-stone-950">Photography:</strong> I love capturing real moments — whether it’s nature,
                                     street vibes, or
                                     candid group shots of <span class="italic">The Five</span>. Basically I'm the main
                                     photographer of
                                     <span class="italic">The Five</span>.
                                 </li>
                                 <li>
-                                    <strong>Videography:</strong> Telling stories through a lens is something I truly
+                                    <strong class="text-stone-950">Videography:</strong> Telling stories through a lens is something I truly
                                     enjoy. I often
                                     shoot
                                     short clips or cinematic edits of our group memories with <span class="italic">The
                                         Five</span>.
                                 </li>
                                 <li>
-                                    <strong>Editing:</strong> Whether it’s photos or videos, I love refining raw content
+                                    <strong class="text-stone-950">Editing:</strong> Whether it’s photos or videos, I love refining raw content
                                     into something
                                     meaningful.
                                     From enhancing color and mood to timing clips with music — editing is where I bring
@@ -97,43 +101,19 @@
                                     together creatively.
                                 </li>
                                 <li>
-                                    <strong>Sports:</strong> Whether it’s playing or watching, sports keep me energetic and grounded. Cricket is my
+                                    <strong class="text-stone-950">Sports:</strong> Whether it’s playing or watching, sports keep me energetic and grounded. Cricket is my
                                     favorite,
                                     and I’m always up for a quick match or a heated game analysis! <br>
-                                    I’m also into mobile gaming — I used to play <span class="font-semibold">PUBG Mobile</span> competitively at the
+                                    I’m also into mobile gaming — I used to play <span class="font-semibold text-stone-900">PUBG Mobile</span> competitively at the
                                     <span class="italic">T2 Underdog</span> esports level. Though my PC gaming experience is limited, I’ve dabbled in a
                                     few titles just for fun.
                                 </li>
                                   
                         </div>
 
-                        <!-- RIGHT: Technical Skills -->
-                        <div class="right basis-full md:basis-[40%] space-y-5 lg:-mt-7">
-                            <div>
-                                <p class="mb-1 font-light">HTML</p>
-                                <progress class="progress progress-accent w-full h-4" value="100" max="100"></progress>
-                            </div>
-                            <div>
-                                <p class="mb-1 font-light">CSS,Tailwind CSS</p>
-                                <progress class="progress progress-accent w-full h-4" value="90" max="100"></progress>
-                            </div>
-                            <div>
-                                <p class="mb-1 font-light">Java Script</p>
-                                <progress class="progress progress-accent w-full h-4" value="40" max="100"></progress>
-                            </div>
-                            <div>
-                                <p class="mb-1 font-light">C & CPP Programming</p>
-                                <progress class="progress progress-accent w-full h-4" value="80" max="100"></progress>
-                            </div>
-                            <div>
-                                <p class="mb-1 font-light">Python (Learning)</p>
-                                <progress class="progress progress-accent w-full h-4" value="20" max="100"></progress>
-                            </div>
-                        </div>
-
                     </div>
                 </section>
-                <p class="my-10 text-center text-lg">
+                <p class="my-10 text-center lg:text-lg text-stone-800">
                     Be it a tech challenge, a creative vision, or just vibing with my squad — I show up with full
                     energy, unmatched focus,
                     and real passion every single time.
@@ -143,9 +123,9 @@
 <!-- Social links -->
  <div class="social-links container mx-auto">
     <div class="s-text">
-        <h2 class="text-3xl w-52 mx-auto font-bold mb-4 border-b border-teal-500 text-center">Get in Touch</h2>
+        <h2 class="lg:text-3xl text-xl lg:w-52 w-32 mx-auto font-bold mb-4 border-b border-teal-500 text-center">Get in Touch</h2>
     </div>
-    <div class="icons text-center text-5xl mt-5">
+    <div class="icons text-center text-4xl lg:text-5xl mt-5">
         <button class="px-2 hover:translate hover:scale-110 transition-all transform duration-300 ease-in-out"><a href="https://www.facebook.com/share/16YeYyjT6s/"
             title="Facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a></button>
         <button class="px-2 hover:translate hover:scale-110 transition-all transform duration-300 ease-in-out"><a href="https://www.instagram.com/imtiazz_ahamedd/" 
