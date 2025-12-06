@@ -1,17 +1,3 @@
-// ===== Loading Screen =====
-window.addEventListener('load', () => {
-    const loadingScreen = document.querySelector('.loading-screen');
-    if (loadingScreen) {
-        setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-            // Remove from DOM after transition
-            setTimeout(() => {
-                loadingScreen.remove();
-            }, 500);
-        }, 1000); // Show for 1 second
-    }
-});
-
 // ===== Intersection Observer for Animations =====
 const observerOptions = {
     threshold: 0.1,
@@ -61,7 +47,7 @@ if (header) {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const parallaxElements = document.querySelectorAll('.parallax');
-        
+
         parallaxElements.forEach(element => {
             const speed = element.dataset.speed || 0.5;
             element.style.transform = `translateY(${scrolled * speed}px)`;
