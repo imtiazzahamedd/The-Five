@@ -1,11 +1,385 @@
+/* ===== CSS Custom Properties ===== */
+:root {
+  --primary-teal: #14b8a6;
+  --dark-teal: #0f766e;
+  --darker-teal: #134e4a;
+  --accent-amber: #f59e0b;
+  --accent-cyan: #06b6d4;
+  --bg-dark: #0a0a0a;
+  --bg-darker: #050505;
+  --text-light: #f5f5f5;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===== Dark Modern Body ===== */
+body {
+  background: white;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Loading Screen ===== */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #000000 0%, #134e4a 50%, #14b8a6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #14b8a6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Fade In Animations ===== */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Slide In Animations ===== */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Scale In Animation ===== */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== Scroll to Top Button ===== */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.4);
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.6);
+}
+
+/* ===== Enhanced Card Hover Effects ===== */
+.profile-card-enhanced {
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.profile-card-enhanced:hover::before {
+  left: 100%;
+}
+
+.profile-card-enhanced:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(20, 184, 166, 0.3);
+}
+
+/* ===== Glassmorphism Effect ===== */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Profile Card Simple Styling - Matching Live Site */
+.Rime,
+.bappe,
+.imti,
+.limon,
+.ifty {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Rime:hover,
+.bappe:hover,
+.imti:hover,
+.limon:hover,
+.ifty:hover {
+  transform: translateY(-8px);
+}
+
+/* Video Section - Simple */
+.gv video {
+  transition: all 0.3s ease;
+}
+
+.gv video:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Pulse Animation ===== */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
   }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+
+  50% {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.8);
   }
-  
+}
+
+.pulse-on-hover:hover {
+  animation: pulse-glow 2s infinite;
+}
+
+/* ===== Gradient Text ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #14b8a6, #06b6d4, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Parallax Effect ===== */
+.parallax {
+  transition: transform 0.1s ease-out;
+}
+
+/* ===== Smooth Image Loading ===== */
+img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+img:not([src]) {
+  opacity: 0;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #14b8a6, #0f766e);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0f766e, #14b8a6);
+}
+
+/* ===== Responsive Utilities ===== */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* ===== Animation Delays for Staggered Effects ===== */
+.delay-100 {
+  animation-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+/* ===== Text Colors for Light Theme ===== */
+.group_pic h1,
+.gv h2 {
+  color: #0f766e;
+  text-shadow: none;
+}
+
+.bf_text p {
+  color: #1f2937 !important;
+}
+
+.bf_text .text-purple-800 {
+  color: #6b21a8 !important;
+  text-shadow: none;
+}
+
+.bf_text .text-amber-500 {
+  color: #d97706 !important;
+  text-shadow: none;
+}
+
+/* Enhanced Heading Glow */
+header h1 {
+  text-shadow: 0 2px 10px rgba(20, 184, 166, 0.2);
+}
+
+header p {
+  text-shadow: none;
+}
+
+/* Video Section Heading Enhancement */
+.gv h2 {
+  background: linear-gradient(135deg, #0f766e, #0891b2, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: none;
+}
+
+/* Group Pictures Heading */
+.gp_heading h1 {
+  background: linear-gradient(135deg, #0f766e, #0891b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: none;
+}
+
+/* Enhanced Container Backgrounds */
+.container {
+  position: relative;
+}
+
+/* Profile Cards Container Glow */
+.profile-cards::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Scroll Indicator Glow */
+.scroll-to-top {
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.6),
+    0 0 30px rgba(20, 184, 166, 0.3);
+}
+
+.scroll-to-top:hover {
+  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.8),
+    0 0 40px rgba(20, 184, 166, 0.5);
+}
