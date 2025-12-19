@@ -53,3 +53,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===== Console Easter Egg =====
 console.log('%c👋 Welcome to The Five!', 'font-size: 20px; color: #14b8a6; font-weight: bold;');
 console.log('%cBuilt with ❤️ by Imtiaz Ahamed', 'font-size: 14px; color: #06b6d4;');
+
+
+
