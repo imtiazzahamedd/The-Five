@@ -1,23 +1,15 @@
-// ===== Intersection Observer for Animations =====
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-};
+// ===== Header Scroll Animation =====
+const header = document.querySelector('.header-main');
 
-const appearOnScroll = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            appearOnScroll.unobserve(entry.target);
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
     });
-}, observerOptions);
-
-// Observe all animated elements
-const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
-animatedElements.forEach(element => {
-    appearOnScroll.observe(element);
-});
+}
 
 // ===== Scroll to Top Button =====
 const scrollToTopBtn = document.querySelector('.scroll-to-top');
@@ -41,20 +33,6 @@ if (scrollToTopBtn) {
     });
 }
 
-// ===== Parallax Effect for Header =====
-const header = document.querySelector('header');
-if (header) {
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('.parallax');
-
-        parallaxElements.forEach(element => {
-            const speed = element.dataset.speed || 0.5;
-            element.style.transform = `translateY(${scrolled * speed}px)`;
-        });
-    });
-}
-
 // ===== Smooth Scroll for Anchor Links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -71,27 +49,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// ===== Add Stagger Animation to Profile Cards =====
-const profileCards = document.querySelectorAll('.profile-cards > div > div');
-profileCards.forEach((card, index) => {
-    card.style.transitionDelay = `${index * 0.1}s`;
-});
-
-// ===== Image Lazy Loading Enhancement =====
-const images = document.querySelectorAll('img[data-src]');
-const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-        }
-    });
-});
-
-images.forEach(img => imageObserver.observe(img));
 
 // ===== Console Easter Egg =====
 console.log('%c👋 Welcome to The Five!', 'font-size: 20px; color: #14b8a6; font-weight: bold;');
